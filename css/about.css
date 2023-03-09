@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Archivo+Black&family=Arsenal:wght@700&family=Bebas+Neue&family=Bungee+Shade&family=Carter+One&family=Coda&family=Francois+One&family=Golos+Text:wght@400;500&family=Inter+Tight&family=Kanit:wght@300&family=Merriweather+Sans&family=Questrial&family=Ruslan+Display&family=Sonsie+One&family=Syncopate:wght@700&family=Tilt+Neon&family=Unbounded:wght@500;800&family=Yatra+One&display=swap');
+
+/* Make dimensions of divs take into account padding and borders */
+* {
+    /* border and the padding don't add up to the dimension	*/
+	box-sizing: border-box;
+}
+
+/* clear out browser default margin on page */
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	overflow-x: hidden;
+}
+
+nav {
+	z-index: 100;
+	display: flex;
+	width: 100vw;
+	height: 120px;
+	position: fixed;
+/*	background-color: red;*/
+	top: 0;
+}
+
+nav ul {
+	display: flex;
+	width: 100vw;
+	height: 120px;
+	list-style-type: none;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+/*	background-color: dimgray;*/
+	justify-content: space-between;
+	font-family: 'Bebas Neue', cursive;
+}
+
+nav li {
+/*	background-color: blue;*/
+	font-size: 35px;
+	height: 120px;
+	line-height: 120px;
+	display: inline-block;
+	padding-top: 5px;
+/*	padding: 0px 150px 0px 150px;*/
+}
+
+.navSide {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+
+nav ul li a:hover {
+	opacity: 0.6;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.about {
+	position: relative;
+	background-color: black;
+	/*background: linear-gradient(to bottom, rgba(0, 0, 0, 1)0%, 
+		rgba(2, 51, 115, 1)60%);*/
+/*	rgba(2, 51, 115, 1);*/
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.about p {
+	font-family: 'Coda', cursive;
+
+/*  font-family: 'Merriweather Sans', sans-serif;*/
+/*  font-family: 'Questrial', sans-serif;*/
+  font-family: 'Acme', sans-serif;
+
+/*  font-family: 'Francois One', sans-serif;*/
+/*  font-family: 'Arsenal', sans-serif;*/
+/*  font-family: 'Inter Tight', sans-serif;*/
+	margin: 0;
+	color: black;
+	font-size: 20px;
+	line-height: 27px;
+}
+
+.about .passage {
+/*	border: 3px black solid;*/
+	text-align: justify;
+	left: 15%;
+
+	position: absolute;
+	padding: 20px;
+	overflow-wrap: break-word;
+	z-index: 3px;
+	width: 535px;
+	height: 400px;
+	background-color: rgba(255, 255, 255, 0.7);	
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 1)0%, 
+		rgba(255, 255, 255, 0.5)100%);
+}
+
+.about .background {
+	left: 20%;
+	position: absolute;
+	overflow-wrap: break-word;
+	z-index: 3px;
+	width: 700px;
+	height: 500px;
+	opacity: 0.6;	
+}
+
+.about .background img {
+	width: 100%;
+}
+
+.about .picture {
+	position: absolute;
+	right: 15%;
+	bottom: 10%;
+	overflow-wrap: break-word;
+	z-index: 3px;
+	width: 350px;
+	height: 500px;
+	border: #D90416 solid 15px;
+}
+
+footer {
+	border-top: 3px white solid;
+	font-family: 'Syncopate', sans-serif;
+	font-family: 'Archivo Black', sans-serif;
+	position: relative;
+    padding: 0;
+    background-color: black;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p.bottom {
+	color: white;
+	bottom: 30px;
+    position: absolute;
+    margin: 0;
+    font-size: 20px;
+    z-index: 1;
+    opacity: 0.2;
+    bottom: 20px;
+}
+
+footer p.top {
+/*	font-family: 'Bebas Neue', cursive;*/
+	color: white;
+	top: 0;
+	position: absolute;
+    margin: 0;
+    font-size: 23px;
+    line-height: 50px;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 768px) {
+	.about .background img {
+		width: 0;
+	}
+
+	.about .passage {
+		width: 80%;
+		height: auto;
+		top: 65%;
+		left: 10%;
+	}
+
+	.about p {
+		font-size: 10px;
+		line-height: 15px;
+	}
+
+	.about .picture {
+		border: 0;
+		width: 70%;
+		left: 15%;
+		top: 20%;
+		height: 30%;
+	}
+
+	.about .picture img {
+		width: 100%;
+	}
+
+	footer {
+		height: 100px;
+	}
+
+	footer p.bottom {
+		font-size: 15px;
+		bottom: 6px;
+	}
+
+	footer p.top {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+	.about .background img {
+		width: 0;
+	}
+
+	.about .passage {
+		width: 60%;
+		bottom: 5%;
+		left: 20%;
+		z-index: 2;
+	}
+
+	.about p {
+		line-height: 25px;
+	}
+
+	.about .picture {
+		top: 15%;
+		left: 25%;
+		z-index: 1;
+	}
+}

@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Archivo+Black&family=Arsenal:wght@700&family=Bebas+Neue&family=Bungee+Shade&family=Carter+One&family=Coda&family=Days+One&family=Francois+One&family=Golos+Text:wght@400;500&family=Inter+Tight&family=Kanit:wght@300&family=Merriweather+Sans&family=Questrial&family=Ruslan+Display&family=Sonsie+One&family=Syncopate:wght@700&family=Tilt+Neon&family=Unbounded:wght@500;800;900&family=Yatra+One&display=swap');
+
+/* Make dimensions of divs take into account padding and borders */
+* {
+    /* border and the padding don't add up to the dimension	*/
+	box-sizing: border-box;
+}
+
+/* clear out browser default margin on page */
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	overflow-x: hidden;
+}
+
+nav {
+	z-index: 1000;
+	display: flex;
+	width: 100vw;
+	height: 120px;
+	position: fixed;
+	top: 0;
+}
+
+nav ul {
+	display: flex;
+	width: 100vw;
+	height: 120px;
+	list-style-type: none;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+/*	background-color: dimgray;*/
+	justify-content: space-between;
+	font-family: 'Bebas Neue', cursive;
+}
+
+nav li {
+	z-index: 1000;
+/*	background-color: blue;*/
+	font-size: 35px;
+	height: 120px;
+	line-height: 120px;
+	display: inline-block;
+	padding-top: 5px;
+/*	padding: 0px 150px 0px 150px;*/
+}
+
+.navSide {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+	opacity: 0.6;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.name {
+	position: relative;
+	background-color: black;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.name h1 {
+	z-index: 3;
+	position: absolute;
+	color: white;
+	font-size: 190px;
+	font-family: 'Yatra One', cursive;
+}
+
+.name .nameBackground {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 700px;
+	height: auto;
+}
+
+.name .nameBackground img {
+	width: 100%;
+	z-index: 1;
+	position: absolute;
+	opacity: 0.5;
+	border-bottom: red solid 8px;
+}
+
+.name .mask {
+	z-index: 2;
+	position: absolute;
+	width: 700px;
+	height: 385px;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0)50%, 
+		rgba(49, 161, 222, 0.5)100%);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0)50%, 
+		rgba(76, 162, 205, 0.7)100%);
+}
+
+.mid {
+	width: 792px;
+	height: auto;
+}
+
+.mid img {
+	width: 100%;
+}
+
+.about {
+	position: relative;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 1)0%, 
+		rgba(2, 31, 95, 1)60%);
+/*	rgba(2, 51, 115, 1);*/
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.about p {
+	font-family: 'Yatra One', cursive;
+	font-family: 'Archivo Black', sans-serif;
+	font-family: 'Carter One', cursive;
+
+/*	font-family: 'Unbounded', cursive;*/
+	margin: 0;
+	color: rgba(126, 212, 255, 1.0);
+	color: white;
+	font-size: 35px;
+	line-height: 45px;
+	text-shadow: 5px 5px 5px black, 0 0 1em rgba(96, 182, 225, 1.0), 0 0 0.2em rgba(96, 182, 225, 1.0);
+}
+
+.about .passage {
+	padding: 20px;
+	overflow-wrap: break-word;
+	z-index: 1;
+	width: 700px;
+	height: 400px;
+	width: 49%;
+	height: auto;
+	border-bottom: black solid 6px;
+	border-right: black solid 6px;
+/*	border: black solid 6px;*/
+}
+
+.about button {
+	z-index: 2;
+    position: absolute;
+    right: 15%;
+    bottom: 15%;
+
+    padding: 130px 50px;
+
+
+    border: 6px solid black;
+    border-style: solid;
+	border-radius: 1000px;
+	background-color: rgba(242, 191, 39, 1.0);
+	background-color: rgba(96, 182, 225, 1.0);
+	background-color: rgba(173, 0, 0, 1.0);	
+/*	background-color: rgba(160, 172, 242, 0.95);*/
+	color: black;
+	width: auto;
+	font-size: 30px;
+/*	text-transform: uppercase;*/
+	text-decoration: none;
+	font-family: 'Bungee Shade', cursive;
+	font-family: 'Ruslan Display', cursive;
+	font-family: 'Sonsie One', cursive;
+	transition: all 0.5s ease-in-out;
+}
+
+.about button:hover {
+	background-color: black;
+	color: rgba(242, 191, 39, 1.0);
+	color: rgba(96, 182, 225, 1.0);
+	color: rgba(203, 30, 30, 1.0);
+	color: white;
+/*	color: white;*/
+	transform: scale(1.05);
+	cursor: pointer;
+}
+
+.work {
+	background-color: rgba(76, 162, 205, 1);
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.work {
+	position: relative;
+	background-color: rgba(2, 31, 95, 1);
+	width: 100%;
+	height: auto;
+/*	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;*/
+	margin: 0 auto;
+	padding: 50px;
+	font-size: 0rem;
+}
+
+.work .title {
+	font-size: 50px;
+	color: white;
+	color: rgba(183, 10, 10, 1.0);
+	font-family: 'Unbounded', cursive;
+	font-weight: 800;
+	text-shadow: 5px 5px black;
+}
+
+.work .moreWorks {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	text-decoration: none;
+	padding-top: 15px;
+}
+
+.work button {
+	z-index: 2;
+    padding: 50px 30px;
+    margin-bottom: 20px;
+
+
+/*    border: 3px solid black;*/
+    border-style: solid;
+    border: 0;
+	background-color: rgba(173, 0, 0, 1.0);	
+	background-color: white;
+	color: black;
+	width: 60%;
+	font-size: 30px;
+	text-decoration: none;
+	font-family: 'Bungee Shade', cursive;
+	font-family: 'Ruslan Display', cursive;
+	font-family: 'Sonsie One', cursive;
+	transition: all 0.5s ease-in-out;
+}
+
+.work button:hover {
+	background-color: black;
+	color: rgba(203, 30, 30, 1.0);
+	color: white;
+
+	cursor: pointer;
+}
+
+.indivWork {
+	position: relative;
+	width: 60%;
+	margin: 1%;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.indivWork img {
+	width: 100%;
+	height: auto;
+	transform: scale(1);
+	transition: all 1s ease;
+}
+
+.indivWork .mask {
+	position: absolute;
+    /* cover/fill parent div */
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	padding: 2%;
+	background-color: rgba(255, 255, 255, 0.7);
+	opacity: 0;
+
+  /* initial state */
+  transition: all 1s ease;
+
+  line-height: 5px;
+}
+
+.indivWork:hover .mask {
+	opacity: 1;
+}
+
+/* initial values for hidden items */
+.indivWork.mask p,
+.indivWork.mask a {
+	opacity: 0;
+	transform: scale(0);
+	transition: all 1s ease-in-out;
+}
+
+
+/* scale up and show when we hover over its parents */
+.indivWork:hover .mask p,
+.indivWork:hover .mask a {
+	opacity: 1;
+	transform: scale(1.0);
+}
+
+.work p.first {
+	font-size: 30px;
+	font-weight: 800;
+	color: black;
+	font-family: 'Unbounded', cursive;
+}
+
+.work p.second {
+	font-weight: 500;
+	font-size: 15px;
+	color: black;
+	font-family: 'Unbounded', cursive;
+}
+
+footer {
+	border-top: 3px white solid;
+	font-family: 'Syncopate', sans-serif;
+	font-family: 'Archivo Black', sans-serif;
+	position: relative;
+    padding: 0;
+    background-color: black;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p.bottom {
+	color: white;
+	bottom: 30px;
+    position: absolute;
+    margin: 0;
+    font-size: 20px;
+    z-index: 1;
+    opacity: 0.2;
+    bottom: 20px;
+}
+
+footer p.top {
+/*	font-family: 'Bebas Neue', cursive;*/
+	color: white;
+	top: 0;
+	position: absolute;
+    margin: 0;
+    font-size: 23px;
+    line-height: 50px;
+    z-index: 2;
+}
+
+/*@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+	.about p {
+		font-size: 30px;
+	}
+
+	.about button {
+		padding: 100px 20px;
+		right: 15%;
+		bottom: 9%;
+	}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+	.about p {
+		font-size: 30px;
+	}
+
+	.about button {
+		padding: 100px 20px;
+		right: 9%;
+		bottom: 9%;
+	}
+}*/
+
+@media only screen and (max-width: 768px) {
+	.name h1 {
+		font-size: 65px;
+	}
+
+	.name .nameBackground {
+		width: 350px;
+	}
+
+	.name .mask {
+		width: 350px;
+		height: 192.5px;
+	}
+
+	.mid {
+		width: 500px;
+	}
+
+	.about .passage {
+		width: 65%;
+		border: 0;
+	}
+
+	.about button {
+		align-self: center;
+		bottom: 5%;
+		padding: 70px 15px;
+		font-size: 20px;
+	}
+
+	.about p {
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	.work .title {
+		font-size: 25px;
+	}
+
+	footer {
+		height: 100px;
+	}
+
+	footer p.bottom {
+		font-size: 15px;
+		bottom: 6px;
+	}
+
+	footer p.top {
+		font-size: 16px;
+	}
+
+	.work button {;
+		font-size: 15px;
+		padding: 20px 20px;
+	}
+
+	.work .moreWorks {
+		padding-top: 5px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.name h1 {
+		font-size: 140px;
+	}
+
+	.name .nameBackground {
+		width: 500px;
+	}
+
+	.name .mask {
+		width: 500px;
+		height: 275px;
+	}
+
+	.mid {
+		width: 650px;
+	}
+
+	.about .passage {
+		width: 60%;
+		border: 0;
+	}
+
+	.about {
+		height: 50vh;
+	}
+
+	.about button {
+		bottom: 11%;
+		right: 7%;
+		padding: 90px 25px;
+		font-size: 25px;
+	}
+
+	.about p {
+		font-size: 25px;
+		line-height: 35px;
+	}
+}
